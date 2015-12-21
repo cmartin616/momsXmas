@@ -1,0 +1,7 @@
+.text-center {
+  text-align: center;
+}
+
+.form-control[disabled] {
+  background-color: #FFF
+}
