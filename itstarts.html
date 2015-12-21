@@ -20,6 +20,8 @@
 <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="css/main.css">
 
+<script src="lib/underscore-min.js"</script>
+
 <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
@@ -91,33 +93,39 @@
             </div>
 
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-2 col-md-offset-1">
                     <div class="well">
                         <input type="text" class="form-control text-center answer" id="question1answer" placeholder="???" value="???" disabled>
-                        
+                        <input type="text" class="form-control text-center validate" id="question1validate" value="53" disabled>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="well">
                         <input type="text" class="form-control text-center answer " id="question2answer" placeholder="???" value="???" disabled>
-                        
+                        <input type="text" class="form-control text-center validate" id="question2validate" value="3" disabled>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="well">
                         <input type="text" class="form-control text-center answer" id="question3answer" placeholder="???" value="???" disabled>
-                        
+                        <input type="text" class="form-control text-center validate" id="question3validate" value="71" disabled>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="well">
                         <input type="text" class="form-control text-center answer" id="question4answer" placeholder="???" value="???" disabled>
+                        <input type="text" class="form-control text-center validate" id="question4validate" value="62" disabled>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="well">
+                        <button type="button" class="btn btn-primary" id="validateButton">Check Answers</button>
                     </div>
                 </div>
             </div>
 
             <div class="well text-center">
-                <a href="http://www.google.com" target="_blank" id="answerLink">Try Your Luck!</a>
+                <p><a class="btn btn-danger btn-lg" href="fail.html" target="_blank" id="answerLink" role="button" disabled>Next Level! &raquo;</a></p>
             </div>
         </div>
     </div>
