@@ -33,3 +33,23 @@
   border-color: #b92c28;
   color: #fff;
 }
+
+.hint {
+  padding-left: 2.5%;
+  color: #ccc;
+  display:none;
+}
+
+.navbar-inverse {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f92100+0,73c42d+100 */
+  background: #f92100; /* Old browsers */
+  background: -moz-linear-gradient(left,  #f92100 0%, #73c42d 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #f92100 0%,#73c42d 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #f92100 0%,#73c42d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f92100', endColorstr='#73c42d',GradientType=1 ); /* IE6-9 */
+
+}
+
+.navbar-brand {
+  color: white !important;
+}

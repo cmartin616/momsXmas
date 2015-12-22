@@ -10,9 +10,9 @@ $(function() {
       var answer3 = $('#question3answer').val();
       var answer4 = $('#question4answer').val();
 
-      // var homepage = 'http://localhost/github/momsXmas/';
+      var homepage = 'http://localhost/github/momsXmas/';
       // var homepage = 'http://chrismartingisdev.com/';
-      var homepage = 'http://cmartin.esri.com/github/momsXmas/';
+      // var homepage = 'http://cmartin.esri.com/github/momsXmas/';
 
       var link = homepage + answer1 + answer2 + answer3 + answer4 + '.html';
 
@@ -28,11 +28,18 @@ $(function() {
       var count = 0;
 
       _.each(answers, function (ans, i){
+        $div = $('#' + ans.attr('id'));
         if (ans.val() === validations[i].val()){
-          $('#' + ans.attr('id')).addClass('passValidate');
+          if ($div.hasClass('failValidate')){
+            $div.removeClass('failValidate');
+          }
+          $div.addClass('passValidate');
           count += 1;
         } else {
-          $('#' + ans.attr('id')).addClass('failValidate');
+          if ($div.hasClass('passValidate')){
+            $div.removeClass('passValidate');
+          }
+          $div.addClass('failValidate');
         }
       });
 
@@ -43,5 +50,13 @@ $(function() {
         $answerLink.removeAttr('disabled');
       }
 
+    });
+
+    $('.hintButton').on('click', function(){
+      $this = $(this);
+      // console.log($this.attr('id'));
+      var hint = $this.attr('id').slice(0, -6);
+      $hint = $('.' + hint);
+      $hint.show();
     });
 });

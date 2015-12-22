@@ -20,6 +20,8 @@
 <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="css/main.css">
 
+<script src="lib/underscore-min.js"</script>
+
 <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
@@ -46,12 +48,15 @@
             <div class="panel panel-default">
                 <img src="img/ispy.jpg" height="auto" width="100%">
             </div>
+        <div class="panel panel-default">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">Question 1:</h3>
                 </div>
                 <div class="panel-body">
-                    What two-digit year were you born?
+                    <span>What color is the smiley face?</span>
+                    <button type="button" class="btn btn-warning pull-right hintButton" id ="question1hintbutton">Hint</button>
+                    <div class="hint question1hint">***Right side, middle***</div>
                 </div>
                 <div class="panel-footer">
                     <input type="text" class="form-control question" id="question1" placeholder="Question 1">
@@ -63,7 +68,9 @@
                     <h3 class="panel-title">Question 2:</h3>
                 </div>
                 <div class="panel-body">
-                    How many siblings do you have?
+                    <span>How many Santas shaped like a star?</span>
+                    <button type="button" class="btn btn-warning pull-right hintButton" id ="question2hintbutton">Hint</button>
+                    <div class="hint question2hint">***Not bears, not snowmen, not trolls***</div>
                 </div>
                 <div class="panel-footer">
                     <input type="text" class="form-control question" id="question2" placeholder="Question 2">
@@ -75,7 +82,11 @@
                     <h3 class="panel-title">Question 3:</h3>
                 </div>
                 <div class="panel-body">
-                    What two-digit year did you graduate high school?
+                    <span>What color is the troll's hair?</span>
+                    <button type="button" class="btn btn-warning pull-right hintButton" id ="question3hintbutton">Hint</button>
+                    <div class="hint question3hint">
+                        <a href="https://upload.wikimedia.org/wikipedia/en/9/93/Wizard_troll_doll-low_res.jpg" target="_blank"> You remember trolls... </a>
+                    </div>
                 </div>
                 <div class="panel-footer">
                     <input type="text" class="form-control question" id="question3" placeholder="Question 3">
@@ -87,7 +98,9 @@
                     <h3 class="panel-title">Question 4:</h3>
                 </div>
                 <div class="panel-body">
-                    How old are you now?
+                    <span>How many spots on the butterfly's wings?</span>
+                    <button type="button" class="btn btn-warning pull-right hintButton" id ="question4hintbutton">Hint</button>
+                    <div class="hint question4hint">***Two wings, each wing has the same number***</div>
                 </div>
                 <div class="panel-footer">
                     <input type="text" class="form-control question" id="question4" placeholder="Question 4">
@@ -95,33 +108,39 @@
             </div>
 
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-2 col-md-offset-1">
                     <div class="well">
                         <input type="text" class="form-control text-center answer" id="question1answer" placeholder="???" value="???" disabled>
-                        
+                        <input type="text" class="form-control text-center validate" id="question1validate" value="yellow" disabled>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="well">
                         <input type="text" class="form-control text-center answer " id="question2answer" placeholder="???" value="???" disabled>
-                        
+                        <input type="text" class="form-control text-center validate" id="question2validate" value="2" disabled>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="well">
                         <input type="text" class="form-control text-center answer" id="question3answer" placeholder="???" value="???" disabled>
-                        
+                        <input type="text" class="form-control text-center validate" id="question3validate" value="white" disabled>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="well">
                         <input type="text" class="form-control text-center answer" id="question4answer" placeholder="???" value="???" disabled>
+                        <input type="text" class="form-control text-center validate" id="question4validate" value="10" disabled>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="well">
+                        <button type="button" class="btn btn-primary" id="validateButton">Check Answers</button>
                     </div>
                 </div>
             </div>
 
             <div class="well text-center">
-                <a href="http://www.google.com" target="_blank" id="answerLink">Try Your Luck!</a>
+                <p><a class="btn btn-danger btn-lg" href="fail.html" target="_blank" id="answerLink" role="button" disabled>Next Level! &raquo;</a></p>
             </div>
         </div>
     </div>
