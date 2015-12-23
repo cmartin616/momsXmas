@@ -4,25 +4,22 @@ $(function() {
     var answerBox = $('#' + $(this).attr('id') + 'answer');
     var answer = $(this).val();
     answerBox.val(answer);
-
-      // var answer1 = $('#question1answer').val();
-      // var answer2 = $('#question2answer').val();
-      // var answer3 = $('#question3answer').val();
-      // var answer4 = $('#question4answer').val();
-
-      // var homepage = 'http://localhost/github/momsXmas/';
-      // // var homepage = 'http://chrismartingisdev.com/';
-      // // var homepage = 'http://cmartin.esri.com/github/momsXmas/';
-
-      // var link = homepage + answer1 + answer2 + answer3 + answer4 + '.html';
-
-      // $('#answerLink').attr('href', link);
     });
 
   $('#validateButton').on('click', function(){
     var answers = [$('#question1answer'), $('#question2answer'), $('#question3answer'), $('#question4answer')];
 
     var validations = [$('#question1validate'), $('#question2validate'), $('#question3validate'), $('#question4validate')];
+
+    if ($('#question5answer')){
+      var list = ['question5', 'question6', 'question7', 'question8'];
+      _.each(list, function(item){
+        answers.push($('#' + item + 'answer'));
+        validations.push($('#' + item + 'validate'));
+      });
+    }
+
+    console.log(answers);
 
     var answersLength = answers.length;
     var count = 0;
@@ -102,8 +99,11 @@ $(function() {
       }
 
       if (lives === 0){
+
         // clear puzzle
-        $('.letterWell').text('');
+        $letterWell = $('.letterWell');
+        $letterWell.text('');
+        $('.letterElipse').text('.');
 
         // reset lives
         lives = 5;
@@ -116,6 +116,8 @@ $(function() {
         $letterButton.removeClass('btn-danger');
         $letterButton.addClass('btn-success');
         $letterButton.attr('disabled', false);
+
+        alert('Oops, I warned you.  Starting over!');
       }
     }
   });

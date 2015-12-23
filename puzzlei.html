@@ -42,24 +42,24 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
-        <h1>Good job!  Now onto task 2: </h1>
-        <p>I Spy?</p>
+        <h1>Good job!  Now onto level 2: </h1>
+        <p>I Spy?  No, you spy!</p>
         <div class="panel panel-default">
             <div class="panel panel-default">
-
-                <img src="img/ispy2.jpg" height="100%" width="auto" style="display:block; margin-left:auto; margin-right:auto">
+                <img src="img/ispy.jpg" height="auto" width="100%">
             </div>
+        </div>
         <div class="panel panel-default">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">Question 1:</h3>
                 </div>
                 <div class="panel-body">
-                    <img src="img/penguin.png" height="50%" width="auto">
-                    <span style="font-size: 24px"> + </span>
-                    <img src="img/nutcracker.png" height="50%" width="auto">
+                    <span>What color is the smiley face?</span>
                     <button type="button" class="btn btn-warning pull-right hintButton" id ="question1hintbutton">Hint</button>
-                    <div class="hint question1hint"><a href="img/I-Spy-Christmas.png" target="_blank"> ANSWER </a></div>
+                    <div class="hint question1hint">
+                        ***Right side, middle***
+                    </div>
                 </div>
                 <div class="panel-footer">
                     <input type="text" class="form-control question" id="question1" placeholder="Question 1">
@@ -71,11 +71,9 @@
                     <h3 class="panel-title">Question 2:</h3>
                 </div>
                 <div class="panel-body">
-                    <img src="img/reindeer.png" height="50%" width="auto">
-                    <span style="font-size: 24px"> - </span>
-                    <img src="img/gingerbread.png" height="50%" width="auto">
+                    <span>How many Santas shaped like a star?</span>
                     <button type="button" class="btn btn-warning pull-right hintButton" id ="question2hintbutton">Hint</button>
-                    <div class="hint question2hint"><a href="img/I-Spy-Christmas.png" target="_blank"> ANSWER </a></div>
+                    <div class="hint question2hint">***Not bears, not snowmen, not trolls***</div>
                 </div>
                 <div class="panel-footer">
                     <input type="text" class="form-control question" id="question2" placeholder="Question 2">
@@ -87,12 +85,10 @@
                     <h3 class="panel-title">Question 3:</h3>
                 </div>
                 <div class="panel-body">
-                    <img src="img/santa.png" height="50%" width="auto">
-                    <span style="font-size: 24px; padding-left:5px"> * </span>
-                    <img src="img/sleigh.png" height="50%" width="auto">
+                    <span>What color is the troll's hair?</span>
                     <button type="button" class="btn btn-warning pull-right hintButton" id ="question3hintbutton">Hint</button>
                     <div class="hint question3hint">
-                        <a href="https://upload.wikimedia.org/wikipedia/en/9/93/Wizard_troll_doll-low_res.jpg" target="_blank"><a href="img/I-Spy-Christmas.png" target="_blank"> ANSWER </a></a>
+                        <a href="https://upload.wikimedia.org/wikipedia/en/9/93/Wizard_troll_doll-low_res.jpg" target="_blank"> You remember trolls... </a>
                     </div>
                 </div>
                 <div class="panel-footer">
@@ -105,15 +101,9 @@
                     <h3 class="panel-title">Question 4:</h3>
                 </div>
                 <div class="panel-body">
-                    <span style="font-size: 24px; padding-left:5px"> ( </span>
-                    <img src="img/elf.png" height="50%" width="auto">
-                    <span style="font-size: 24px; padding-left:5px"> * </span>
-                    <img src="img/ornament.png" height="50%" width="auto">
-                    <span style="font-size: 24px; padding-left:5px"> ) </span>
-                    <span style="font-size: 24px; padding-left:5px"> + </span>
-                    <img src="img/blackreindeer.png" height="50%" width="auto">
+                    <span>How many spots on the butterfly's wings?</span>
                     <button type="button" class="btn btn-warning pull-right hintButton" id ="question4hintbutton">Hint</button>
-                    <div class="hint question4hint"><a href="img/I-Spy-Christmas.png" target="_blank"> ANSWER </a></div>
+                    <div class="hint question4hint">***Two wings, each wing has the same number***</div>
                 </div>
                 <div class="panel-footer">
                     <input type="text" class="form-control question" id="question4" placeholder="Question 4">
@@ -124,7 +114,7 @@
                 <div class="col-md-2 col-md-offset-1">
                     <div class="well">
                         <input type="text" class="form-control text-center answer" id="question1answer" placeholder="???" value="???" disabled>
-                        <input type="text" class="form-control text-center validate" id="question1validate" value="10" disabled>
+                        <input type="text" class="form-control text-center validate" id="question1validate" value="yellow" disabled>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -136,13 +126,13 @@
                 <div class="col-md-2">
                     <div class="well">
                         <input type="text" class="form-control text-center answer" id="question3answer" placeholder="???" value="???" disabled>
-                        <input type="text" class="form-control text-center validate" id="question3validate" value="20" disabled>
+                        <input type="text" class="form-control text-center validate" id="question3validate" value="white" disabled>
                     </div>
                 </div>
                 <div class="col-md-2">
                     <div class="well">
                         <input type="text" class="form-control text-center answer" id="question4answer" placeholder="???" value="???" disabled>
-                        <input type="text" class="form-control text-center validate" id="question4validate" value="35" disabled>
+                        <input type="text" class="form-control text-center validate" id="question4validate" value="10" disabled>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -153,7 +143,7 @@
             </div>
 
             <div class="well text-center">
-                <p><a class="btn btn-danger btn-lg" href="fail.html" target="_blank" id="answerLink" role="button" disabled>Next Level! &raquo;</a></p>
+                <p><a class="btn btn-danger btn-lg" href="richard.html" target="_blank" id="answerLink" role="button" disabled>Next Level! &raquo;</a></p>
             </div>
         </div>
     </div>
