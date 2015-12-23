@@ -1,0 +1,373 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+  body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+</style>
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/main.css">
+
+<script src="lib/underscore-min.js"</script>
+
+<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Nancy's Christmas Adventure Challenge</a>
+  </div>
+</div>
+</nav>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <h1>For your final challenge...</h1>
+        <p>
+            You know how it works.  5 misses allowed.  Better make them count!  
+            <button type="button" class="btn btn-success pull-right livesButton" disabled>Lives: <span class="badge" id="livesSpan">5</span></button>
+        </p>
+
+        <div class="panel panel-default">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <div class="row">
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterA">
+                                    A
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterB">
+                                    B
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterC">
+                                    C
+                                </button>                                    
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterD">
+                                    D
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterE">
+                                    E
+                                </button>   
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterF">
+                                    F
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterG">
+                                    G
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterH">
+                                    H
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterI">
+                                    I
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterJ">
+                                    J
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterK">
+                                    K
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterL">
+                                    L
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterM">
+                                    M
+                                </button>   
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterN">
+                                    N
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterO">
+                                    O
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterP">
+                                    P
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterQ">
+                                    Q
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterR">
+                                    R
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterS">
+                                    S
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterT">
+                                    T
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterU">
+                                    U
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterV">
+                                    V
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterW">
+                                    W
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterX">
+                                    X
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1 col-md-offset-5 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterY">
+                                    Y
+                                </button>
+                            </div>
+                            <div class="col-md-1 text-center" style="display:inline-block">
+                                <button type="button" class="btn btn-success letterButton" id="letterZ">
+                                    Z
+                                </button>
+                            </div>
+                        </div>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterW">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterE">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center blank">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterA">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterR">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterE">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center blank">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterG">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterO">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterI">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterN">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterG">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterT">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterO">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center blank">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterL">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterE">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterA">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterR">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterN">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center blank">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterT">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterO">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center blank">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center blank">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterS">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterK">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterI">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center blank">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterA">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letterT">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center blank">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letter." style="font-size:24px;">
+                                <strong>.</strong>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letter." style="font-size:24px;">
+                                <strong>.</strong>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center letter." style="font-size:24px;">
+                                <strong>.</strong>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="well letterWell text-center blank">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="well text-center">
+                <p><a class="btn btn-danger btn-lg" href="http://mapleskiridge.com/" target="_blank" id="finaleLink" role="button" disabled>Finale! &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <hr>
+
+    <footer>
+      <p>&copy; Chris is Awesome Adventure Co.</p>
+  </footer>
+</div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>

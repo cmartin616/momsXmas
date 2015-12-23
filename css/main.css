@@ -53,3 +53,18 @@
 .navbar-brand {
   color: white !important;
 }
+
+.letterButton{
+  margin-bottom: 20px;
+}
+
+.letterWell {
+  height: 60px;
+  font-size:24px;
+  font-weight: bold;
+}
+
+.blank {
+  background-color: black;
+  background-image: none;
+}
